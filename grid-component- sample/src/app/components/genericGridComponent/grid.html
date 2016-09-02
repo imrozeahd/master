@@ -1,0 +1,42 @@
+<div>
+    <div *ngIf="isSearchRequired">
+        <table class="tablecss">
+            <tr>
+                <td>
+                  
+<span>Search</span>
+<input type="text" placeholder="Search" [(ngModel)]="filterValue" (keyup)="filterSearch()" /> </td>
+
+        </tr>
+    </table>
+    </div>
+    <table class="hoverTable">
+        <thead>
+
+            <th *ngFor="let col of columns"><a (click)="sort(col.name)">{{col.descr}}</a> </th>
+            <td [hidden]="!isCheckBoxReq" ><input type="checkbox" checked="{{setAllOn}}"  value="{{value}}"  (change)="SetCheckboxes(value)"></td>
+       
+        </thead>
+        <tbody>
+            <tr *ngFor="let row of displayRows" (click)="callmyfunc(row)">
+                <td *ngFor="let col of columns">{{row[col.name]}}</td>
+                <td [hidden]="!isCheckBoxReq" ><input type="checkbox" checked="{{setAllOn}}"> </td>
+            
+                            </tr>
+            
+        </tbody>
+    </table>
+    <table class="tablecss">
+        <tr >
+            <td>
+                <ul class="pagination">
+                        <li *ngFor="let pagenumber of numberarray"><a (click)="callrow(pagenumber)" >{{pagenumber}}</a></li>
+                    </ul>
+            </td>
+        </tr>
+    </table>
+    
+</div>
+
+
+{{check}}

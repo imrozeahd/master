@@ -1,0 +1,19 @@
+<h1>
+  {{title}}
+</h1>
+
+<!--<textbox placeholder="Name" [mandatory]="false" [enabled]="true" description="Put your name" ></textbox>-->
+<div style="width:640px">
+         <span>search text for first name</span>   <input type="text" [(ngModel)]="abc" style="margin-bottom:10px">
+            
+            <grid [rows]="people" [columns]="columns" [pagesize]="5" [isCheckBoxReq]="true" [autoGenColumns]="false" [setPagination]="5" filterName="firstName" filterValue="{{abc}}"  ></grid>
+           <span>search text for last name</span> <input type="text" [(ngModel)]="dsa" style="margin-bottom:10px" >
+             <grid [rows]="people" [columns]="columns" [pagesize]="5" [isCheckBoxReq]="true" [autoGenColumns]="false" [setPagination]="3"  filterName="lastName" filterValue="{{dsa}}" ></grid>
+
+
+
+
+<gen-grid-search [rows]="people" [columns]="columns" [pagesize]="5" [isCheckBoxReq]="true" [autoGenColumns]="false" [setPagination]="5" [isSearchRequired]="true" ></gen-grid-search>
+<generic-grid [rows]="people" [columns]="columns" [pagesize]="5" [isCheckBoxReq]="true" [autoGenColumns]="false" [setPagination]="5" [isSearchRequired]="true" ></generic-grid>
+<my-generic-grid [rows]="people" [columns]="columns" [pagesize]="5" [isCheckBoxReq]="true" [autoGenColumns]="false" [setPagination]="5" [isSearchRequired]="true" ></my-generic-grid>
+</div>

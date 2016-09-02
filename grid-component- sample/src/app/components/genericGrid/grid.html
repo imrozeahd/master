@@ -1,0 +1,34 @@
+<div>
+    <table class="hoverTable">
+        <thead>
+
+            <th *ngFor="let col of columns"><a (click)="sort(col.name)">{{col.descr}}</a> </th>
+            <td [hidden]="!isCheckBoxReq" ><input type="checkbox" checked="{{setAllOn}}"  value="{{value}}"  (change)="SetCheckboxes(value)"></td>
+            <!--<td><span> input</span></td>
+            <td><span> input1</span></td>-->
+        </thead>
+        <tbody>
+            <tr *ngFor="let row of displayRows" (click)="callmyfunc(row)">
+                <td *ngFor="let col of columns">{{row[col.name]}}</td>
+                <td [hidden]="!isCheckBoxReq" ><input type="checkbox" checked="{{setAllOn}}"> </td>
+                <!--<td ><textbox placeholder="Name" [mandatory]="false" [enabled]="true" description="Put your name" ></textbox></td>
+                            
+                            <td ><my-test></my-test></td>-->
+                            </tr>
+            
+        </tbody>
+    </table>
+    <table class="tablecss">
+        <tr >
+            <td>
+                <ul class="pagination">
+                        <li *ngFor="let pagenumber of numberarray"><a (click)="callrow(pagenumber)" >{{pagenumber}}</a></li>
+                    </ul>
+            </td>
+        </tr>
+    </table>
+    
+</div>
+
+
+{{check}}

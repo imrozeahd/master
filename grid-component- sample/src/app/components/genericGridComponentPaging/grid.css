@@ -1,0 +1,59 @@
+
+
+  	.hoverTable{
+		color: #333; /* Lighten up font color */
+font-family: Helvetica, Arial, sans-serif; /* Nicer font */
+width: 640px;
+border-collapse:
+collapse; border-spacing: 0;
+  margin-left: auto;
+margin-right: auto;
+
+	}
+  .hoverTable th{ background: #F3F3F3;	padding:7px; border:black 1px solid;text-align: center;}
+	.hoverTable td{ 
+		padding:7px; border:black 1px solid;text-align: center;
+	}
+	/* Define the default color for all the table rows */
+	.hoverTable tr{
+		background: lightgray;
+	}
+	/* Define the hover highlight color for the table row */
+    .hoverTable tr:hover {
+          background-color: deepskyblue;
+    }
+.tablecss
+{
+		color: #333; /* Lighten up font color */
+font-family: Helvetica, Arial, sans-serif; /* Nicer font */
+width: 640px;
+border-collapse:
+collapse; border-spacing: 0;
+  margin-left: auto;
+margin-right: auto;
+
+}
+ ul.pagination {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+}
+
+ul.pagination li {display: inline;}
+
+ul.pagination li a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color .3s;
+    border: 1px solid #ddd;
+}
+
+ul.pagination li a.active {
+    background-color: #4CAF50;
+    color: white;
+    border: 1px solid #4CAF50;
+}
+
+ul.pagination li a:hover:not(.active) {background-color: #ddd;}
